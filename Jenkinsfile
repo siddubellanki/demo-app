@@ -10,7 +10,9 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/cddu123/demo-app.git'
+                url: 'https://github.com/siddubellanki/demo-app.git'
+                credentialsId: 'github-creds'
+
             }
         }
 
