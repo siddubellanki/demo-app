@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/siddubellanki/demo-app.git',
+                    credentialsId: 'github-creds'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Build successful'
+            }
+        }
+    }
+}
