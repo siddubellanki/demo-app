@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Build') {
             steps {
                 sh 'docker build -t $IMAGE:latest .'
@@ -35,3 +34,4 @@ pipeline {
         }
     }
 }
+
